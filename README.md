@@ -62,7 +62,7 @@ It ensures high availability, fault tolerance, and automated monitoring and aler
   - `sg-0e523fb5ee345e569`
 - Key Pair: `project`
 
-### 5. IAM Role: `Aja-Kishan-Project5`
+### 5. IAM Role: `Kishan-Project5`
 - Policies attached:
   - `AmazonEC2RoleforSSM`
   - `AmazonSNSFullAccess`
