@@ -189,16 +189,16 @@ sudo systemctl restart httpd
 sudo yum update -y
 sudo yum install -y amazon-cloudwatch-agent
 ```
-# Create the directory structure (if it doesn't exist)
+## Create the directory structure (if it doesn't exist)
 ```bash
 sudo mkdir -p /opt/aws/amazon-cloudwatch-agent/etc/
 ```
-# Create/edit the configuration file using nano:
+## Create/edit the configuration file using nano:
 ```bash
 sudo nano /opt/aws/amazon-cloudwatch-agent/etc/amazon-cloudwatch-agent.json
 ```
 
-# Paste the configuration (use right-click or Shift+Insert to paste in most terminals):
+## Paste the configuration (use right-click or Shift+Insert to paste in most terminals):
 ```bash
 {
     "agent": {
@@ -266,7 +266,7 @@ sudo nano /opt/aws/amazon-cloudwatch-agent/etc/amazon-cloudwatch-agent.json
 
 ```
 
-# Press Ctrl+O, then Enter to save, then Ctrl+X to exit
+## Press Ctrl+O, then Enter to save, then Ctrl+X to exit
 
 # Check the file was created properly:
 sudo ls -la /opt/aws/amazon-cloudwatch-agent/etc/
