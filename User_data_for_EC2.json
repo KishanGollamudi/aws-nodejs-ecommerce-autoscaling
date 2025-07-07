@@ -1,0 +1,29 @@
+#!/bin/bash
+sudo yum update -y
+sudo yum -y install httpd
+sudo systemctl start httpd
+sudo systemctl enable httpd
+sudo systemctl status httpd
+sudo yum install mariadb-server
+sudo systemctl start mariadb
+sudo systemctl enable mariadb
+sudo systemctl status mariadb
+sudo mysql_secure_installation
+sudo mysql -u root -p
+sudo amazon-linux-extras enable php7.4
+sudo yum install -y php php-cli php-mysqlnd php-fpm
+sudo systemctl restart httpd
+sudo systemctl enable httpd
+sudo yum install  https://rpms.remirepo.net/enterprise/remi-release-7.rpm -y
+sudo yum makecache
+sudo yum install yum-utils
+sudo  amazon-linux-extras | grep php
+sudo yum-config-manager –disable ‘remi-php*’
+sudo amazon-linux-extras enable php7.4
+sudo yum clean
+sudo yum install php-{curl,pear,gd,mbstring,bcmath,pdo,mbstring,mysqlnd,json,xml,zip,common,cgi,intl}
+sudo yum install git -y
+sudo git clone https://github.com/Ai-TechNov/ecomm.git
+cd ecomm/
+sudo cp ./index.html /var/www/html/
+sudo systemctl restart httpd
